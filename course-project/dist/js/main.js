@@ -1,5 +1,5 @@
 const header = document.querySelector('header');
-const menuBtn = document.querySelector('.menu-btn');
+const menuBtn = document.querySelector('.mobile-menu-button');
 const backdrop = document.querySelector('.mobile-backdrop');
 
 let headerScrolled = false;

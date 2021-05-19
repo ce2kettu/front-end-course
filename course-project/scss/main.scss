@@ -68,7 +68,7 @@ header {
     min-width: 7rem;
     height: 100%;
     font-weight: 500;
-    color: #000;
+    transition: color 0.2s ease-in-out, background-color 0.075s ease-in-out;
 
     a {
       color: inherit;
@@ -80,13 +80,18 @@ header {
     }
 
     &.selected {
-      font-weight: 700;
+      color: $primary-color;
       border-bottom: 3px solid $primary-color;
+
+      &:hover {
+        color: darken($primary-color, 15);
+      }
     }
 
     &:hover {
       background: rgba($primary-color, 0.05);
       cursor: pointer;
+      color: #000;
     }
   }
 
@@ -118,9 +123,7 @@ main {
   }
 
   .content {
-    //width: 768px;
-    /* margin-top: 2rem; */
-    height: 1500px;
+    height: 500px;
     background: #fff;
   }
 }
@@ -130,8 +133,68 @@ footer {
   width: 100%;
   max-width: 80rem;
   position: relative;
-  height: 5rem;
   background: $primary-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  color: #fff;
+
+  .footer-left {
+    display: flex;
+  }
+
+  .footer-contact {
+    display: flex;
+    flex-direction: column;
+
+    .footer-contact-image img {
+      height: 3rem;
+      width: auto;
+    }
+  }
+
+  .footer-contact-details {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    margin-left: 3rem;
+
+    span {
+      padding: 0.25rem 0;
+    }
+  }
+
+  .footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .footer-right-social {
+      flex: 1;
+      display: flex;
+      align-items: flex-end;
+      font-weight: 500;
+      margin-bottom: .3rem;
+    }
+  }
+
+  .footer-social-media-icons {
+    display: flex;
+    flex-direction: row;
+
+    .footer-social-media-icon {
+      padding: 0 0.5rem;
+      cursor: pointer;
+
+      svg {
+        width: 1.5rem;
+        height: auto;
+        fill: #fff;
+      }
+    }
+  }
 }
 
 @import 'mobile';

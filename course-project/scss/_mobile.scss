@@ -3,17 +3,48 @@
     display: none !important;
   }
 
-  .header-logo {
-      margin-left: 0 !important;
+  header {
+    .header-logo {
+      margin-left: 1rem;
+
+      img {
+        height: 1.5rem;
+      }
+    }
+  }
+
+  footer {
+    padding: 1rem;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: baseline;
+
+    .footer-left {
+        flex-direction: column;
+
+        .footer-contact-details {
+            margin-left: 0;
+            margin-top: 1rem;
+        }
+    }
+
+    .footer-right-social {
+        display: none !important;
+    }
+
+    .footer-right {
+        margin-top: 1rem;
+    }
   }
 
   .header-content {
     padding: 0 1rem !important;
+    justify-content: start !important;
   }
 }
 
 @include mediaBig {
-    .menu-btn {
-        display: none;
-    }
+  .mobile-menu-button {
+    display: none;
+  }
 }
