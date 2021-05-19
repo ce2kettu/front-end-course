@@ -6,6 +6,10 @@
   .header-logo {
       margin-left: 0 !important;
   }
+
+  .header-content {
+    padding: 0 1rem !important;
+  }
 }
 
 @include mediaBig {

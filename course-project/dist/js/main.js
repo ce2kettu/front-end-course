@@ -1,5 +1,6 @@
 const header = document.querySelector('header');
 const menuBtn = document.querySelector('.menu-btn');
+const backdrop = document.querySelector('.mobile-backdrop');
 
 let headerScrolled = false;
 document.addEventListener('scroll', (e) => {
@@ -14,12 +15,13 @@ document.addEventListener('scroll', (e) => {
   }
 });
 
+let isNavOpen = false;
 menuBtn.addEventListener('click', (e) => {
-  let isMenuShown = !menuBtn.classList.contains('close');
+  document.body.classList.add('nav-open');
+  isNavOpen = true;
+});
 
-  if (isMenuShown) {
-    menuBtn.classList.add('close');
-  } else {
-    menuBtn.classList.remove('close');
-  }
+backdrop.addEventListener('click', (e) => {
+  document.body.classList.remove('nav-open');
+  isNavOpen = false;
 });
