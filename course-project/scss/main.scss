@@ -1,5 +1,6 @@
 @import 'config';
 @import 'reset';
+@import 'menu';
 
 * {
   box-sizing: border-box;
@@ -21,6 +22,10 @@ body {
   display: grid;
   grid-template-rows: 1fr auto;
   min-height: 100vh;
+}
+
+.content-wrapper > img {
+  width: 100%;
 }
 
 header {
@@ -104,13 +109,15 @@ main {
 
   .content-wrapper {
     margin-top: 3.5rem;
+    display: flex;
+    flex-direction: column;
   }
 
   .content {
     //width: 768px;
-    background: #424242;
     /* margin-top: 2rem; */
     height: 1500px;
+    background: #fff;
   }
 }
 
@@ -122,3 +129,5 @@ footer {
   height: 5rem;
   background: $primary-color;
 }
+
+@import 'mobile';

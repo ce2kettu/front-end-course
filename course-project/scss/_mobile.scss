@@ -1,0 +1,15 @@
+@include mediaMd {
+  .header-tabs {
+    display: none !important;
+  }
+
+  .header-logo {
+      margin-left: 0 !important;
+  }
+}
+
+@include mediaBig {
+    .menu-btn {
+        display: none;
+    }
+}
