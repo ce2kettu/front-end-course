@@ -186,7 +186,8 @@ table {
     align-self: start;
     padding: 2rem;
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    border: 1px solid rgba(0, 0, 0, 0.1); }
     .restaurants-grid .restaurant-item .restaurant-name {
       font-weight: 700;
       font-size: 3rem; }
@@ -213,7 +214,9 @@ table {
     min-width: 2rem;
     text-align: center;
     margin-right: 0.35rem;
-    font-size: 0.75rem; }
+    font-size: 0.75rem;
+    border: 1px solid #0000003b;
+    font-weight: 500; }
     .nutrition-values .food-nutrition-tag.tag-1 {
       background: rgba(45, 87, 255, 0.3); }
     .nutrition-values .food-nutrition-tag.tag-2 {

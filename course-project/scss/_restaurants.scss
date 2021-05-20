@@ -22,6 +22,7 @@
     padding: 2rem;
     display: flex;
     flex-direction: column;
+    border: 1px solid rgba(0, 0, 0, 0.1);
 
     .restaurant-name {
       font-weight: 700;
@@ -62,7 +63,9 @@
     text-align: center;
     margin-right: 0.35rem;
     font-size: 0.75rem;
-
+    border: 1px solid #0000003b;
+    font-weight: 500;
+    
     &.tag-1 {
       background: rgba(45, 87, 255, 0.3);
     }
