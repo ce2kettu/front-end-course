@@ -50,6 +50,7 @@
     font-size: 1.2rem;
     margin-top: 0.5rem;
     font-weight: 500;
+    transition: background-color 0.075s ease-in-out;
 
     &.selected {
       font-weight: 700;
