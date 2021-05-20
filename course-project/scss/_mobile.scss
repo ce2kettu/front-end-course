@@ -1,3 +1,6 @@
+@include mediaSm {
+}
+
 @include mediaMd {
   .header-tabs {
     display: none !important;
@@ -20,24 +23,24 @@
     justify-content: baseline;
 
     .footer-left {
-        flex-direction: column;
-        width: 100%;
-        align-items: center;
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
 
-        .footer-contact-details {
-            margin-left: 0;
-            margin-top: 1rem;
-            align-items: center;
-        }
+      .footer-contact-details {
+        margin-left: 0;
+        margin-top: 1rem;
+        align-items: center;
+      }
     }
 
     .footer-right-social {
-        display: none !important;
+      display: none !important;
     }
 
     .footer-right {
-        margin-top: 1rem;
-        width: 100%;
+      margin-top: 1rem;
+      width: 100%;
     }
   }
 
@@ -45,10 +48,24 @@
     padding: 0 1rem !important;
     justify-content: start !important;
   }
+
+  .restaurants-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @include mediaBig {
   .mobile-menu-button {
     display: none;
+  }
+}
+
+@include mediaLg {
+  .restaurants-grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    .restaurant-item {
+      align-self: stretch !important;
+    }
   }
 }

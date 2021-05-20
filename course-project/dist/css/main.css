@@ -166,6 +166,67 @@ table {
   background: rgba(0, 0, 0, 0.7);
   display: none; }
 
+.content {
+  padding: 2rem; }
+
+.todays-menu {
+  font-weight: 300;
+  font-size: 3rem;
+  padding: 2rem 1rem; }
+
+.restaurants-grid {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2.5rem; }
+  .restaurants-grid .restaurant-item {
+    background: rgba(227, 87, 45, 0.1);
+    border-radius: 0.75rem;
+    min-height: 15rem;
+    align-self: start;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column; }
+    .restaurants-grid .restaurant-item .restaurant-name {
+      font-weight: 700;
+      font-size: 3rem; }
+    .restaurants-grid .restaurant-item .restaurant-menu {
+      display: flex;
+      flex-direction: column; }
+      .restaurants-grid .restaurant-item .restaurant-menu .menu-category {
+        padding: 1rem 0; }
+        .restaurants-grid .restaurant-item .restaurant-menu .menu-category .menu-category-header {
+          font-weight: 500;
+          margin-bottom: 0.5rem;
+          font-size: 1.1rem; }
+        .restaurants-grid .restaurant-item .restaurant-menu .menu-category .menu-category-detail {
+          margin-bottom: 0.5rem;
+          color: rgba(0, 0, 0, 0.8); }
+
+.nutrition-values {
+  display: flex; }
+  .nutrition-values .food-nutrition-tag {
+    border-radius: 0.75rem;
+    min-height: 1rem;
+    padding: 0.25rem;
+    background: green;
+    min-width: 2rem;
+    text-align: center;
+    margin-right: 0.35rem;
+    font-size: 0.75rem; }
+    .nutrition-values .food-nutrition-tag.tag-1 {
+      background: rgba(45, 87, 255, 0.3); }
+    .nutrition-values .food-nutrition-tag.tag-2 {
+      background: rgba(56, 187, 56, 0.3); }
+    .nutrition-values .food-nutrition-tag.tag-3 {
+      background: rgba(255, 87, 255, 0.3); }
+    .nutrition-values .food-nutrition-tag.tag-4 {
+      background: rgba(255, 22, 22, 0.3); }
+    .nutrition-values .food-nutrition-tag.tag-5 {
+      background: rgba(45, 44, 44, 0.3); }
+    .nutrition-values .food-nutrition-tag.tag-6 {
+      background: rgba(45, 87, 1, 0.3); }
+
 * {
   box-sizing: border-box; }
 
@@ -176,7 +237,7 @@ body {
 body {
   font-size: 1rem;
   font-family: 'Roboto', sans-serif;
-  color: #424242;
+  color: rgba(0, 0, 0, 0.87);
   background-color: #f2f2f2; }
 
 .preload * {
@@ -259,7 +320,6 @@ main {
     display: flex;
     flex-direction: column; }
   main .content {
-    height: 500px;
     background: #fff; }
 
 footer {
@@ -284,7 +344,7 @@ footer {
   footer .footer-contact-details {
     display: flex;
     flex-direction: column;
-    font-weight: 500;
+    font-weight: 400;
     margin-left: 3rem; }
     footer .footer-contact-details span {
       padding: 0.25rem 0; }
@@ -298,7 +358,7 @@ footer {
       display: flex;
       align-items: flex-end;
       font-weight: 500;
-      margin-bottom: .3rem; }
+      margin-bottom: 0.3rem; }
   footer .footer-social-media-icons {
     display: flex;
     flex-direction: row; }
@@ -337,8 +397,16 @@ footer {
       width: 100%; }
   .header-content {
     padding: 0 1rem !important;
-    justify-content: start !important; } }
+    justify-content: start !important; }
+  .restaurants-grid {
+    grid-template-columns: 1fr; } }
 
 @media screen and (min-width: 769px) {
   .mobile-menu-button {
     display: none; } }
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .restaurants-grid {
+    grid-template-columns: repeat(2, 1fr); }
+    .restaurants-grid .restaurant-item {
+      align-self: stretch !important; } }
