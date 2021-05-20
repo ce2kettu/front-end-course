@@ -1,0 +1,39 @@
+.main-welcome {
+  font-weight: 700;
+  font-size: 7.5rem;
+  color: #252525;
+}
+
+.restaurant-restrictions {
+  margin-top: 2rem;
+  border-radius: 12px;
+  background: rgba(255, 15, 15, 0.2);
+  padding: 1rem;
+  display: flex;
+  max-width: 40rem;
+
+  .restriction-icon {
+    color: rgba(255, 0, 0, 0.6);
+  }
+
+  .restriction-detail {
+    font-weight: 500;
+    margin-left: 1rem;
+    font-size: 1rem;
+    line-height: 1.2rem;
+    color: #804141;
+  }
+}
+
+.home-page {
+  padding-top: 8rem !important;
+  margin-bottom: 8rem;
+}
+
+#app {
+  background: #fff;
+}
+
+footer {
+  display: none;
+}

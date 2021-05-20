@@ -150,7 +150,15 @@ table {
   background: #fff;
   transform: translateX(-100%);
   transition: transform 0.2s ease-in-out;
-  opacity: 0; }
+  opacity: 0;
+  display: flex;
+  flex-direction: column; }
+  .mobile-nav .mobile-nav-bottom {
+    display: flex;
+    align-items: flex-end;
+    flex: 1;
+    padding: 1rem;
+    font-weight: 500; }
   .mobile-nav .mobile-nav-logo {
     height: 3.5rem;
     padding: 0 1rem;
@@ -168,12 +176,10 @@ table {
     min-height: 2.5rem;
     display: flex;
     align-items: center;
-    font-size: 1.2rem;
     margin-top: 0.5rem;
     font-weight: 500;
     transition: background-color 0.075s ease-in-out; }
     .mobile-nav .mobile-tab.selected {
-      font-weight: 700;
       color: #000;
       background: rgba(142, 183, 59, 0.5); }
       .mobile-nav .mobile-tab.selected:hover {
@@ -204,8 +210,86 @@ table {
   background: rgba(0, 0, 0, 0.7);
   display: none; }
 
-.content {
-  padding: 2rem; }
+footer {
+  background: #9bc448;
+  width: 100%; }
+  footer .footer-wrapper {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 80rem;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    color: #fff; }
+  footer .footer-left {
+    display: flex; }
+  footer .footer-contact {
+    display: flex;
+    flex-direction: column; }
+    footer .footer-contact .footer-contact-image img {
+      height: 3rem;
+      width: auto; }
+  footer .footer-contact-details {
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+    margin-left: 3rem; }
+    footer .footer-contact-details span {
+      padding: 0.25rem 0; }
+  footer .footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    footer .footer-right .footer-right-social {
+      flex: 1;
+      display: flex;
+      align-items: flex-end;
+      font-weight: 500;
+      margin-bottom: 0.3rem; }
+  footer .footer-social-media-icons {
+    display: flex;
+    flex-direction: row; }
+    footer .footer-social-media-icons .footer-social-media-icon {
+      padding: 0 0.5rem;
+      cursor: pointer; }
+      footer .footer-social-media-icons .footer-social-media-icon svg {
+        width: 1.5rem;
+        height: auto;
+        fill: #fff; }
+
+.main-welcome {
+  font-weight: 700;
+  font-size: 7.5rem;
+  color: #252525; }
+
+.restaurant-restrictions {
+  margin-top: 2rem;
+  border-radius: 12px;
+  background: rgba(255, 15, 15, 0.2);
+  padding: 1rem;
+  display: flex;
+  max-width: 40rem; }
+  .restaurant-restrictions .restriction-icon {
+    color: rgba(255, 0, 0, 0.6); }
+  .restaurant-restrictions .restriction-detail {
+    font-weight: 500;
+    margin-left: 1rem;
+    font-size: 1rem;
+    line-height: 1.2rem;
+    color: #804141; }
+
+.home-page {
+  padding-top: 8rem !important;
+  margin-bottom: 8rem; }
+
+#app {
+  background: #fff; }
+
+footer {
+  display: none; }
 
 .todays-menu {
   font-weight: 300;
@@ -220,7 +304,6 @@ table {
   .restaurants-grid .restaurant-item {
     background: rgba(227, 87, 45, 0.1);
     border-radius: 0.75rem;
-    min-height: 15rem;
     align-self: start;
     padding: 2rem;
     display: flex;
@@ -231,7 +314,8 @@ table {
       font-size: 3rem; }
     .restaurants-grid .restaurant-item .restaurant-menu {
       display: flex;
-      flex-direction: column; }
+      flex-direction: column;
+      margin-top: 1rem; }
       .restaurants-grid .restaurant-item .restaurant-menu .menu-category {
         padding: 1rem 0; }
         .restaurants-grid .restaurant-item .restaurant-menu .menu-category .menu-category-header {
@@ -241,6 +325,18 @@ table {
         .restaurants-grid .restaurant-item .restaurant-menu .menu-category .menu-category-detail {
           margin-bottom: 0.5rem;
           color: rgba(0, 0, 0, 0.8); }
+
+.restaurant-1 {
+  background: rgba(39, 255, 0, 0.1) !important; }
+
+.restaurant-2 {
+  background: rgba(251, 0, 255, 0.1) !important; }
+
+.restaurant-3 {
+  background: rgba(255, 0, 0, 0.1) !important; }
+
+.restaurant-4 {
+  background: rgba(4, 0, 255, 0.1) !important; }
 
 .nutrition-values {
   display: flex; }
@@ -254,7 +350,8 @@ table {
     margin-right: 0.35rem;
     font-size: 0.75rem;
     border: 1px solid #0000003b;
-    font-weight: 500; }
+    font-weight: 500;
+    background: #fff !important; }
     .nutrition-values .food-nutrition-tag.tag-1 {
       background: rgba(45, 87, 255, 0.3); }
     .nutrition-values .food-nutrition-tag.tag-2 {
@@ -279,7 +376,7 @@ body {
   font-size: 1rem;
   font-family: 'Roboto', sans-serif;
   color: rgba(0, 0, 0, 0.87);
-  background-color: #f2f2f2; }
+  background-color: #fff; }
 
 .preload * {
   -webkit-transition: none !important;
@@ -289,12 +386,14 @@ body {
   transition: none !important; }
 
 #app {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: 1fr auto;
   min-height: 100vh; }
 
 .content-wrapper > img {
-  width: 100%; }
+  width: 100%;
+  border-radius: 12px;
+  margin-top: 4rem; }
 
 header {
   position: fixed;
@@ -356,60 +455,12 @@ main {
   width: 100%;
   max-width: 80rem;
   margin: 0 auto; }
+  main .content {
+    padding: 2rem; }
   main .content-wrapper {
     margin-top: 3.5rem;
     display: flex;
     flex-direction: column; }
-  main .content {
-    background: #fff; }
-
-footer {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 80rem;
-  position: relative;
-  background: #9bc448;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  color: #fff; }
-  footer .footer-left {
-    display: flex; }
-  footer .footer-contact {
-    display: flex;
-    flex-direction: column; }
-    footer .footer-contact .footer-contact-image img {
-      height: 3rem;
-      width: auto; }
-  footer .footer-contact-details {
-    display: flex;
-    flex-direction: column;
-    font-weight: 400;
-    margin-left: 3rem; }
-    footer .footer-contact-details span {
-      padding: 0.25rem 0; }
-  footer .footer-right {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; }
-    footer .footer-right .footer-right-social {
-      flex: 1;
-      display: flex;
-      align-items: flex-end;
-      font-weight: 500;
-      margin-bottom: 0.3rem; }
-  footer .footer-social-media-icons {
-    display: flex;
-    flex-direction: row; }
-    footer .footer-social-media-icons .footer-social-media-icon {
-      padding: 0 0.5rem;
-      cursor: pointer; }
-      footer .footer-social-media-icons .footer-social-media-icon svg {
-        width: 1.5rem;
-        height: auto;
-        fill: #fff; }
 
 @media screen and (max-width: 768px) {
   .header-tabs {

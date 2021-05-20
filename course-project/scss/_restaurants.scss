@@ -1,7 +1,3 @@
-.content {
-  padding: 2rem;
-}
-
 .todays-menu {
   font-weight: 300;
   font-size: 3rem;
@@ -17,7 +13,6 @@
   .restaurant-item {
     background: rgba(227, 87, 45, 0.1);
     border-radius: 0.75rem;
-    min-height: 15rem;
     align-self: start;
     padding: 2rem;
     display: flex;
@@ -32,6 +27,7 @@
     .restaurant-menu {
       display: flex;
       flex-direction: column;
+      margin-top: 1rem;
 
       .menu-category {
         padding: 1rem 0;
@@ -51,6 +47,22 @@
   }
 }
 
+.restaurant-1 {
+  background: rgba(39, 255, 0, 0.1) !important;
+}
+
+.restaurant-2 {
+  background: rgba(251, 0, 255, 0.1) !important;
+}
+
+.restaurant-3 {
+  background: rgba(255, 0, 0, 0.1) !important;
+}
+
+.restaurant-4 {
+  background: rgba(4, 0, 255, 0.1) !important;
+}
+
 .nutrition-values {
   display: flex;
 
@@ -66,7 +78,8 @@
     font-size: 0.75rem;
     border: 1px solid #0000003b;
     font-weight: 500;
-    
+    background: #fff !important; // use plain color for now
+
     &.tag-1 {
       background: rgba(45, 87, 255, 0.3);
     }
