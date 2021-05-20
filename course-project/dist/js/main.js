@@ -3,7 +3,7 @@ const menuBtn = document.querySelector('.mobile-menu-button');
 const backdrop = document.querySelector('.mobile-backdrop');
 
 let headerScrolled = false;
-document.addEventListener('scroll', (e) => {
+document.addEventListener('scroll', e => {
   var scrollY = window.scrollY;
 
   if (scrollY > 0 && !headerScrolled) {
@@ -16,12 +16,15 @@ document.addEventListener('scroll', (e) => {
 });
 
 let isNavOpen = false;
-menuBtn.addEventListener('click', (e) => {
+menuBtn.addEventListener('click', e => {
   document.body.classList.add('nav-open');
   isNavOpen = true;
 });
 
-backdrop.addEventListener('click', (e) => {
+backdrop.addEventListener('click', e => {
   document.body.classList.remove('nav-open');
   isNavOpen = false;
 });
+
+window.addEventListener('load', e => 
+    document.body.classList.remove('preload'));

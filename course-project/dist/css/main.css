@@ -181,6 +181,13 @@ body {
   body.nav-open {
     overflow: hidden; }
 
+.preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important; }
+
 #app {
   display: grid;
   grid-template-rows: 1fr auto;
