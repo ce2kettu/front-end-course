@@ -365,7 +365,9 @@ footer {
     .home-image-wrapper {
       padding: 0; } }
   .home-image-wrapper .home-image {
-    width: 100%; }
+    width: 100%;
+    min-height: 16.5rem;
+    object-fit: cover; }
     @media (min-width: 600px) {
       .home-image-wrapper .home-image {
         border-radius: 0.75rem;
@@ -380,21 +382,36 @@ main .content.home-page {
       padding: 0 2rem;
       margin-bottom: 7.5rem; } }
 
+.main-intro {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 2rem;
+  align-items: center; }
+  @media (min-width: 1200px) {
+    .main-intro {
+      margin-top: 3rem;
+      grid-template-columns: repeat(2, 1fr); } }
+
+.main-image-wrapper {
+  padding: 2rem 0; }
+  @media (min-width: 1200px) {
+    .main-image-wrapper {
+      padding: 2rem; } }
+  .main-image-wrapper .main-image {
+    border-radius: 0.75rem;
+    width: 100%;
+    height: auto; }
+
 .main-paragraph {
   letter-spacing: -0.5px;
-  line-height: 1.4rem;
+  line-height: 1.8rem;
   font-size: 1.5rem;
   max-width: 50rem;
-  font-weight: 500;
-  margin-top: 2rem; }
-  @media (min-width: 1200px) {
-    .main-paragraph {
-      margin-top: 4rem; } }
+  font-weight: 500; }
 
 .main-welcome {
   font-weight: 700;
-  font-size: 3.5rem;
-  color: #252525; }
+  font-size: 3.5rem; }
   @media (min-width: 600px) {
     .main-welcome {
       font-size: 4.5rem; } }
@@ -402,21 +419,62 @@ main .content.home-page {
     .main-welcome {
       font-size: 7.5rem; } }
 
-.restaurant-restrictions {
-  margin-top: 2rem;
-  border-radius: 0.75rem;
-  background: rgba(255, 15, 15, 0.2);
-  padding: 1rem;
-  display: flex;
-  max-width: 40rem; }
-  .restaurant-restrictions .restriction-icon {
-    color: rgba(255, 0, 0, 0.6); }
-  .restaurant-restrictions .restriction-detail {
-    font-weight: 500;
-    margin-left: 1rem;
-    font-size: 1rem;
-    line-height: 1.2rem;
-    color: #804141; }
+.main-commitment {
+  margin-top: 3rem; }
+  @media (min-width: 1200px) {
+    .main-commitment {
+      margin-top: 4rem; } }
+  .main-commitment .main-commitment-heading {
+    font-weight: 600;
+    font-size: 2rem;
+    margin-bottom: 3rem; }
+    @media (max-width: 599px) {
+      .main-commitment .main-commitment-heading {
+        text-align: center; } }
+    @media (min-width: 600px) {
+      .main-commitment .main-commitment-heading {
+        font-size: 2.5rem;
+        margin-bottom: 3rem; } }
+    @media (min-width: 1200px) {
+      .main-commitment .main-commitment-heading {
+        font-size: 3rem;
+        margin-bottom: 4rem; } }
+  .main-commitment .commitments {
+    display: grid;
+    grid-gap: 3.5rem;
+    grid-template-columns: 1fr; }
+    @media (min-width: 600px) {
+      .main-commitment .commitments {
+        grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1200px) {
+      .main-commitment .commitments {
+        grid-template-columns: repeat(3, 1fr); } }
+    .main-commitment .commitments .commitment-item {
+      align-items: center;
+      display: flex;
+      flex-direction: column; }
+      .main-commitment .commitments .commitment-item .commitment-circle {
+        width: 10rem;
+        height: 10rem;
+        background: #37a13c;
+        color: #fafafa;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 3.25rem; }
+        @media (min-width: 900px) {
+          .main-commitment .commitments .commitment-item .commitment-circle {
+            width: 15rem;
+            height: 15rem;
+            font-size: 5rem; } }
+      .main-commitment .commitments .commitment-item .commitment-desc {
+        font-weight: 500;
+        font-size: 1.5rem;
+        margin-top: 1.5rem;
+        text-align: center;
+        line-height: 1.6rem; }
 
 .todays-menu {
   font-weight: 600;
@@ -426,6 +484,9 @@ main .content.home-page {
     .todays-menu {
       font-size: 2.5rem;
       margin-bottom: 4rem; } }
+  @media (min-width: 1200px) {
+    .todays-menu {
+      font-size: 3rem; } }
 
 .restaurants-grid {
   margin-top: 2rem;

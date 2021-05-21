@@ -7,6 +7,8 @@
 
   .home-image {
     width: 100%;
+    min-height: 16.5rem;
+    object-fit: cover;
 
     @include for-tablet-portrait-up {
       @include applyRounded;
@@ -24,31 +26,50 @@ main {
 
       @include for-tablet-portrait-up {
         padding: 0 2rem;
-    margin-bottom: 7.5rem;
-
+        margin-bottom: 7.5rem;
       }
     }
   }
 }
 
+.main-intro {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 2rem;
+  align-items: center;
+
+  @include for-desktop-up {
+    margin-top: 3rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.main-image-wrapper {
+  padding: 2rem 0;
+
+  @include for-desktop-up {
+    padding: 2rem;
+  }
+
+  .main-image {
+    @include applyRounded;
+    width: 100%;
+    height: auto;
+  }
+}
+
 .main-paragraph {
   letter-spacing: -0.5px;
-  line-height: 1.4rem;
+  line-height: 1.8rem;
   font-size: 1.5rem;
   max-width: 50rem;
   font-weight: 500;
-  margin-top: 2rem;
-
-  @include for-desktop-up {
-    margin-top: 4rem;
-  }
 }
 
 .main-welcome {
   font-weight: 700;
   font-size: 3.5rem;
-  color: #252525;
-  
+
   @include for-tablet-portrait-up {
     font-size: 4.5rem;
   }
@@ -58,24 +79,78 @@ main {
   }
 }
 
-.restaurant-restrictions {
-  margin-top: 2rem;
-  @include applyRounded;
-  background: rgba(255, 15, 15, 0.2);
-  padding: 1rem;
-  display: flex;
-  max-width: 40rem;
+.main-commitment {
+  margin-top: 3rem;
 
-  .restriction-icon {
-    color: rgba(255, 0, 0, 0.6);
+  @include for-desktop-up {
+    margin-top: 4rem;
   }
 
-  .restriction-detail {
-    font-weight: 500;
-    margin-left: 1rem;
-    font-size: 1rem;
-    line-height: 1.2rem;
-    color: #804141;
+  .main-commitment-heading {
+    font-weight: 600;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+
+    @include for-phone-only {
+      text-align: center;
+    }
+
+    @include for-tablet-portrait-up {
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+    }
+
+    @include for-desktop-up {
+      font-size: 3rem;
+      margin-bottom: 4rem;
+    }
+  }
+
+  .commitments {
+    display: grid;
+    grid-gap: 3.5rem;
+    grid-template-columns: 1fr;
+
+    @include for-tablet-portrait-up {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include for-desktop-up {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .commitment-item {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+
+      .commitment-circle {
+        width: 10rem;
+        height: 10rem;
+        background: #37a13c;
+        color: #fafafa;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 3.25rem;
+
+        @include for-tablet-landscape-up {
+          width: 15rem;
+          height: 15rem;
+          font-size: 5rem;
+        }
+      }
+
+      .commitment-desc {
+        font-weight: 500;
+        font-size: 1.5rem;
+        margin-top: 1.5rem;
+        text-align: center;
+        line-height: 1.6rem;
+      }
+    }
   }
 }
 
@@ -87,6 +162,10 @@ main {
   @include for-tablet-landscape-up {
     font-size: 2.5rem;
     margin-bottom: 4rem;
+  }
+
+  @include for-desktop-up {
+    font-size: 3rem;
   }
 }
 
