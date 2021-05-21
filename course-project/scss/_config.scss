@@ -44,37 +44,43 @@ $pastelle-color-4-base: rgb(4, 0, 255);
 $pastelle-color-4: mix($pastelle-color-4-base, #fff, 10%);
 $pastelle-color-4-darker: mix($pastelle-color-4, #000, 95%);
 
-
 @mixin easeOut {
   transition: all 0.5s ease-out;
 }
 
-@mixin mediaSm {
-  @media screen and (max-width: 500px) {
+// https://itnext.io/writing-media-queries-with-sass-mixins-3ea591ea3ea4
+@mixin for-phone-only {
+  @media (max-width: 599px) {
     @content;
   }
 }
 
-@mixin mediaMd {
-  @media screen and (max-width: 768px) {
+@mixin for-small-devices {
+  @media (max-width: 800px) {
     @content;
   }
 }
 
-@mixin mediaBig {
-  @media screen and (min-width: 769px) {
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) {
     @content;
   }
 }
 
-@mixin mediaLg {
-  @media screen and (min-width: 769px) and (max-width: 1170px) {
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) {
     @content;
   }
 }
 
-@mixin mediaXl {
-  @media screen and (min-width: 1171px) {
+@mixin for-desktop-up {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) {
     @content;
   }
 }

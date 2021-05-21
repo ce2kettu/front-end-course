@@ -10,6 +10,10 @@
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-tap-highlight-color: transparent;
   user-select: none;
+
+  @include for-tablet-landscape-up {
+      display: none;
+  }
 }
 
 .mobile-nav {

@@ -18,15 +18,23 @@ header {
     height: 100%;
     max-width: 80rem;
     margin: 0 auto;
-    justify-content: space-between;
-    padding: 0 2rem;
+    padding: 0 1rem;
+
+    @include for-tablet-landscape-up {
+      padding: 0 2rem;
+      justify-content: space-between;
+    }
   }
 
   .header-tabs {
-    display: flex;
     flex-direction: row;
     align-items: center;
     margin-left: 5rem;
+    display: none;
+    
+    @include for-tablet-landscape-up {
+      display: flex;
+    }
   }
 
   .header-tab {
@@ -62,7 +70,15 @@ header {
   }
 
   .header-logo {
-    margin-left: 2rem;
+    margin-left: 1rem;
+
+    @include for-tablet-landscape-up {
+      margin-left: 2rem;
+
+      img {
+        height: 2rem;
+      }
+    }
 
     a {
       height: 100%;
@@ -71,7 +87,7 @@ header {
     }
 
     img {
-      height: 2rem;
+      height: 1.5rem;
       width: auto;
     }
   }
