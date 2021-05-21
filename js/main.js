@@ -1,30 +1,30 @@
-// Select DOM items
-const menuBtn = document.querySelector('.menu-btn');
-const menu = document.querySelector('.menu');
-const menuNav = document.querySelector('.menu-nav');
-const menuBranding = document.querySelector('.menu-branding');
-const navItems = document.querySelectorAll('.nav-item');
+const header = document.querySelector('header');
+const menuBtn = document.querySelector('.mobile-menu-button');
+const backdrop = document.querySelector('.mobile-backdrop');
 
-// Set Initial State Of Menu
-let showMenu = false;
+let headerScrolled = false;
+document.addEventListener('scroll', e => {
+  var scrollY = window.scrollY;
 
-menuBtn.addEventListener('click', toggleMenu);
-
-function toggleMenu() {
-  if (!showMenu) {
-    menuBtn.classList.add('close');
-    menu.classList.add('show');
-    menuNav.classList.add('show');
-    menuBranding.classList.add('show');
-    navItems.forEach((item) => item.classList.add('show'));
-  } else {
-    menuBtn.classList.remove('close');
-    menu.classList.remove('show');
-    menuNav.classList.remove('show');
-    menuBranding.classList.remove('show');
-    navItems.forEach((item) => item.classList.remove('show'));
+  if (scrollY > 0 && !headerScrolled) {
+    header.classList.add('header-scrolled');
+    headerScrolled = true;
+  } else if (scrollY == 0 && headerScrolled) {
+    header.classList.remove('header-scrolled');
+    headerScrolled = false;
   }
+});
 
-  // Set Menu State
-  showMenu = !showMenu;
-}
+let isNavOpen = false;
+menuBtn.addEventListener('click', e => {
+  document.body.classList.add('nav-open');
+  isNavOpen = true;
+});
+
+backdrop.addEventListener('click', e => {
+  document.body.classList.remove('nav-open');
+  isNavOpen = false;
+});
+
+window.addEventListener('load', e => 
+    document.body.classList.remove('preload'));
