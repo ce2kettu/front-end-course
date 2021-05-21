@@ -6,7 +6,7 @@
 
 .restaurant-restrictions {
   margin-top: 2rem;
-  border-radius: 12px;
+  @include applyRounded;
   background: rgba(255, 15, 15, 0.2);
   padding: 1rem;
   display: flex;
@@ -28,10 +28,6 @@
 .home-page {
   padding-top: 8rem !important;
   margin-bottom: 8rem;
-}
-
-#app {
-  background: #fff;
 }
 
 footer {

@@ -1,6 +1,49 @@
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900);
+@import url('http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
 
 $primary-color: #9bc448;
+$border-color: #dfe1e5;
+$background-color: #fff;
+$background-color-dark: #202124;
+$text-color-primary: #121215;
+$text-color-dark: #121215;
+$dark-gray-text-color: #424242;
+
+@mixin defaultFont {
+  font-family: 'Montserrat', sans-serif;
+}
+
+$border-radius: 0.75rem;
+
+@function color-darken($color, $amount) {
+  @return mix($color, #000, 100 - $amount);
+}
+
+@mixin defaultBorder {
+  border: 1px solid $border-color;
+}
+
+@mixin applyRounded {
+  border-radius: $border-radius;
+}
+
+$pastelle-color-1-base: rgb(39, 255, 0);
+$pastelle-color-1: mix($pastelle-color-1-base, #fff, 10%);
+$pastelle-color-1-darker: color-darken($pastelle-color-1, 5%);
+
+$pastelle-color-2-base: rgb(251, 0, 255);
+$pastelle-color-2: mix($pastelle-color-2-base, #fff, 10%);
+$pastelle-color-2-darker: mix($pastelle-color-2, #000, 95%);
+
+$pastelle-color-3-base: rgb(255, 0, 0);
+$pastelle-color-3: mix($pastelle-color-3-base, #fff, 10%);
+$pastelle-color-3-darker: mix($pastelle-color-3, #000, 95%);
+
+$pastelle-color-4-base: rgb(4, 0, 255);
+$pastelle-color-4: mix($pastelle-color-4-base, #fff, 10%);
+$pastelle-color-4-darker: mix($pastelle-color-4, #000, 95%);
+
 
 @mixin easeOut {
   transition: all 0.5s ease-out;

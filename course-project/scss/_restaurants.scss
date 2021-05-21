@@ -9,28 +9,86 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2.5rem;
+  color: $text-color-dark;
 
   .restaurant-item {
-    background: rgba(227, 87, 45, 0.1);
+    background: #eee;
     border-radius: 0.75rem;
     align-self: start;
     padding: 2rem;
     display: flex;
     flex-direction: column;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    @include defaultBorder;
 
     .restaurant-name {
       font-weight: 700;
       font-size: 3rem;
     }
 
+    &.restaurant-1 {
+      background: $pastelle-color-1;
+
+      .restaurant-menu {
+        background: $pastelle-color-1-darker;
+        border: 1px solid color-darken($pastelle-color-1, 15%) !important;
+
+        .menu-category:not(:last-child) {
+          border-bottom: 1px solid color-darken($pastelle-color-1, 15%) !important;
+        }
+      }
+    }
+
+    &.restaurant-2 {
+      background: $pastelle-color-2;
+
+      .restaurant-menu {
+        background: $pastelle-color-2-darker;
+        border: 1px solid color-darken($pastelle-color-2, 15%) !important;
+
+        .menu-category:not(:last-child) {
+          border-bottom: 1px solid color-darken($pastelle-color-2, 15%) !important;
+        }
+      }
+    }
+
+    &.restaurant-3 {
+      background: $pastelle-color-3;
+
+      .restaurant-menu {
+        background: $pastelle-color-3-darker;
+        border: 1px solid color-darken($pastelle-color-3, 15%) !important;
+
+        .menu-category:not(:last-child) {
+          border-bottom: 1px solid color-darken($pastelle-color-3, 15%) !important;
+        }
+      }
+    }
+
+    &.restaurant-4 {
+      background: $pastelle-color-4;
+
+      .restaurant-menu {
+        background: $pastelle-color-4-darker;
+        border: 1px solid color-darken($pastelle-color-4, 15%) !important;
+
+        .menu-category:not(:last-child) {
+          border-bottom: 1px solid color-darken($pastelle-color-4, 15%) !important;
+        }
+      }
+    }
+
     .restaurant-menu {
       display: flex;
       flex-direction: column;
-      margin-top: 1rem;
+      margin-top: 2rem;
+      @include applyRounded;
 
       .menu-category {
-        padding: 1rem 0;
+        padding: 1rem;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid $border-color;
+        }
 
         .menu-category-header {
           font-weight: 500;
@@ -45,22 +103,6 @@
       }
     }
   }
-}
-
-.restaurant-1 {
-  background: rgba(39, 255, 0, 0.1) !important;
-}
-
-.restaurant-2 {
-  background: rgba(251, 0, 255, 0.1) !important;
-}
-
-.restaurant-3 {
-  background: rgba(255, 0, 0, 0.1) !important;
-}
-
-.restaurant-4 {
-  background: rgba(4, 0, 255, 0.1) !important;
 }
 
 .nutrition-values {
@@ -78,30 +120,6 @@
     font-size: 0.75rem;
     border: 1px solid #0000003b;
     font-weight: 500;
-    background: #fff !important; // use plain color for now
-
-    &.tag-1 {
-      background: rgba(45, 87, 255, 0.3);
-    }
-
-    &.tag-2 {
-      background: rgba(56, 187, 56, 0.3);
-    }
-
-    &.tag-3 {
-      background: rgba(255, 87, 255, 0.3);
-    }
-
-    &.tag-4 {
-      background: rgba(255, 22, 22, 0.3);
-    }
-
-    &.tag-5 {
-      background: rgba(45, 44, 44, 0.3);
-    }
-
-    &.tag-6 {
-      background: rgba(45, 87, 1, 0.3);
-    }
+    background: #fff;
   }
 }
