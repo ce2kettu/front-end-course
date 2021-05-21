@@ -42,12 +42,6 @@ body {
   min-height: 100vh;
 }
 
-.content-wrapper > img {
-  width: 100%;
-  @include applyRounded;
-  margin-top: 4rem;
-}
-
 main {
   width: 100%;
   max-width: 80rem;
@@ -55,9 +49,12 @@ main {
 
   .content {
     padding: 2rem;
+    padding-top: 11.5rem;
+    margin-bottom: 7.5rem;
 
     @include for-phone-only {
-      padding: 2rem 1rem;
+      padding: 2rem 0.875rem;
+      margin-bottom: 3rem;
     }
   }
 

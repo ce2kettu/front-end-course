@@ -29,20 +29,17 @@ $border-radius: 0.75rem;
 }
 
 $pastelle-color-1-base: rgb(39, 255, 0);
-$pastelle-color-1: mix($pastelle-color-1-base, #fff, 10%);
+$pastelle-color-1: mix($pastelle-color-1-base, #fff, 15%);
 $pastelle-color-1-darker: color-darken($pastelle-color-1, 5%);
 
-$pastelle-color-2-base: rgb(251, 0, 255);
-$pastelle-color-2: mix($pastelle-color-2-base, #fff, 10%);
-$pastelle-color-2-darker: mix($pastelle-color-2, #000, 95%);
+$pastelle-color-2-base: rgb(251, 0, 30);
+$pastelle-color-2: mix($pastelle-color-2-base, #fff, 15%);
+$pastelle-color-2-darker: color-darken($pastelle-color-2, 5%);
 
-$pastelle-color-3-base: rgb(255, 0, 0);
-$pastelle-color-3: mix($pastelle-color-3-base, #fff, 10%);
-$pastelle-color-3-darker: mix($pastelle-color-3, #000, 95%);
+$pastelle-color-3-base: rgb(90, 4, 170);
+$pastelle-color-3: mix($pastelle-color-3-base, #fff, 15%);
+$pastelle-color-3-darker: color-darken($pastelle-color-3, 5%);
 
-$pastelle-color-4-base: rgb(4, 0, 255);
-$pastelle-color-4: mix($pastelle-color-4-base, #fff, 10%);
-$pastelle-color-4-darker: mix($pastelle-color-4, #000, 95%);
 
 @mixin easeOut {
   transition: all 0.5s ease-out;
@@ -51,12 +48,6 @@ $pastelle-color-4-darker: mix($pastelle-color-4, #000, 95%);
 // https://itnext.io/writing-media-queries-with-sass-mixins-3ea591ea3ea4
 @mixin for-phone-only {
   @media (max-width: 599px) {
-    @content;
-  }
-}
-
-@mixin for-small-devices {
-  @media (max-width: 800px) {
     @content;
   }
 }

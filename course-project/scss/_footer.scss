@@ -1,5 +1,5 @@
 footer {
-  background: $primary-color;
+  background: #0c0c0c;
   width: 100%;
 
   .footer-wrapper {
@@ -15,7 +15,7 @@ footer {
     flex-direction: column;
 
     @include for-tablet-landscape-up {
-      padding: 2.25rem;
+      padding: 4rem 2.25rem;
       flex-direction: row;
     }
   }
@@ -69,14 +69,15 @@ footer {
 
     @include for-tablet-landscape-up {
       margin-top: 0;
-      width: auto;
+      align-items: flex-end;
+      width: 50%;
     }
 
     .footer-right-social {
       flex: 1;
       align-items: flex-end;
       font-weight: 500;
-      margin-bottom: 0.3rem;
+      margin-bottom: 1rem;
       display: none;
 
       @include for-tablet-landscape-up {

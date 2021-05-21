@@ -22,7 +22,7 @@
   left: 0;
   top: 0;
   width: calc(100% - 5rem);
-  height: 100vh;
+  height: 100%;
   background: $background-color;
   transform: translateX(-100%);
   transition: transform 0.2s ease-in-out;
@@ -34,7 +34,7 @@
     display: flex;
     align-items: flex-end;
     flex: 1;
-    padding: 1rem;
+    padding: 2rem;
     font-weight: 500;
   }
 

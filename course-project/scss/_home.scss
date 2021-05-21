@@ -1,7 +1,61 @@
+.home-image-wrapper {
+  padding: 0 2rem 2rem 2rem;
+
+  @include for-phone-only {
+    padding: 0;
+  }
+
+  .home-image {
+    width: 100%;
+
+    @include for-tablet-portrait-up {
+      @include applyRounded;
+      margin-top: 4rem;
+    }
+  }
+}
+
+main {
+  .content {
+    &.home-page {
+      margin-top: 2rem;
+      padding: 0 1rem;
+      margin-bottom: 4rem;
+
+      @include for-tablet-portrait-up {
+        padding: 0 2rem;
+    margin-bottom: 7.5rem;
+
+      }
+    }
+  }
+}
+
+.main-paragraph {
+  letter-spacing: -0.5px;
+  line-height: 1.4rem;
+  font-size: 1.5rem;
+  max-width: 50rem;
+  font-weight: 500;
+  margin-top: 2rem;
+
+  @include for-desktop-up {
+    margin-top: 4rem;
+  }
+}
+
 .main-welcome {
   font-weight: 700;
-  font-size: 7.5rem;
+  font-size: 3.5rem;
   color: #252525;
+  
+  @include for-tablet-portrait-up {
+    font-size: 4.5rem;
+  }
+
+  @include for-desktop-up {
+    font-size: 7.5rem;
+  }
 }
 
 .restaurant-restrictions {
@@ -25,7 +79,140 @@
   }
 }
 
-.home-page {
-  padding-top: 8rem !important;
-  margin-bottom: 8rem;
+.todays-menu {
+  font-weight: 600;
+  font-size: 2rem;
+  margin-top: 4rem;
+
+  @include for-tablet-landscape-up {
+    font-size: 2.5rem;
+    margin-bottom: 4rem;
+  }
+}
+
+.restaurants-grid {
+  margin-top: 2rem;
+  display: grid;
+  grid-gap: 2.5rem;
+  color: $text-color-dark;
+  grid-template-columns: 1fr;
+
+  @include for-tablet-landscape-up {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include for-desktop-up {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .restaurant-item {
+    background: #eee;
+    @include applyRounded;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include for-phone-only {
+      padding: 1rem;
+    }
+
+    .restaurant-name {
+      font-weight: 700;
+      font-size: 3rem;
+      align-items: center;
+      display: flex;
+      height: 100%;
+      margin-left: 0.5rem;
+
+      @include for-phone-only {
+        margin-top: 1rem;
+      }
+    }
+
+    &.restaurant-1 {
+      background: $pastelle-color-1;
+
+      .restaurant-menu {
+        background: $pastelle-color-1-darker;
+        border: 1px solid color-darken($pastelle-color-1, 15%) !important;
+
+        .menu-category:not(:last-child) {
+          border-bottom: 1px solid color-darken($pastelle-color-1, 15%) !important;
+        }
+      }
+    }
+
+    &.restaurant-2 {
+      background: $pastelle-color-2;
+
+      .restaurant-menu {
+        background: $pastelle-color-2-darker;
+        border: 1px solid color-darken($pastelle-color-2, 15%) !important;
+
+        .menu-category:not(:last-child) {
+          border-bottom: 1px solid color-darken($pastelle-color-2, 15%) !important;
+        }
+      }
+    }
+
+    &.restaurant-3 {
+      background: $pastelle-color-3;
+
+      .restaurant-menu {
+        background: $pastelle-color-3-darker;
+        border: 1px solid color-darken($pastelle-color-3, 15%) !important;
+
+        .menu-category:not(:last-child) {
+          border-bottom: 1px solid color-darken($pastelle-color-3, 15%) !important;
+        }
+      }
+    }
+
+    .restaurant-menu {
+      display: flex;
+      flex-direction: column;
+      margin-top: 2rem;
+      @include applyRounded;
+
+      .menu-category {
+        padding: 1rem;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid $border-color;
+        }
+
+        .menu-category-header {
+          font-weight: 500;
+          margin-bottom: 0.5rem;
+          font-size: 1.1rem;
+        }
+
+        .menu-category-detail {
+          margin-bottom: 0.5rem;
+          color: rgba(0, 0, 0, 0.8);
+          font-size: 0.9rem;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
+
+.nutrition-values {
+  display: flex;
+
+  // TODO: should have a tooltip or something when hovered
+  .food-nutrition-tag {
+    border-radius: 0.75rem;
+    min-height: 1rem;
+    padding: 0.25rem;
+    min-width: 2rem;
+    text-align: center;
+    margin-right: 0.35rem;
+    font-size: 0.75rem;
+    border: 1px solid #0000006b;
+    font-weight: 500;
+    background: #fff;
+  }
 }
