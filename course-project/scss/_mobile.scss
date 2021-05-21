@@ -6,6 +6,12 @@
     display: none !important;
   }
 
+  main {
+    .content {
+      padding: 2rem 1rem;
+    }
+  }
+
   header {
     .header-logo {
       margin-left: 1rem;
@@ -17,10 +23,10 @@
   }
 
   footer {
-    padding: 1rem;
-    flex-direction: column;
-    align-items: baseline;
-    justify-content: baseline;
+    .footer-wrapper {
+      padding: 1.75rem 1.75rem;
+      flex-direction: column;
+    }
 
     .footer-left {
       flex-direction: column;

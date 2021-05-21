@@ -13,7 +13,7 @@
 
   .restaurant-item {
     background: #eee;
-    border-radius: 0.75rem;
+    @include applyRounded;
     align-self: start;
     padding: 2rem;
     display: flex;
@@ -108,7 +108,7 @@
 .nutrition-values {
   display: flex;
 
-  // should have a tooltip or something
+  // TODO: should have a tooltip or something when hovered
   .food-nutrition-tag {
     border-radius: 0.75rem;
     min-height: 1rem;
