@@ -112,10 +112,6 @@ main {
     grid-template-columns: 1fr;
 
     @include for-tablet-portrait-up {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    @include for-desktop-up {
       grid-template-columns: repeat(3, 1fr);
     }
 
@@ -135,8 +131,9 @@ main {
         justify-content: center;
         font-weight: 700;
         font-size: 3.25rem;
+        text-align: center;
 
-        @include for-tablet-landscape-up {
+        @include for-desktop-up {
           width: 15rem;
           height: 15rem;
           font-size: 5rem;

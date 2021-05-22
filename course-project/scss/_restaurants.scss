@@ -1,0 +1,99 @@
+.content-restaurants {
+  padding: 2rem;
+  padding-top: 11.5rem;
+  margin-bottom: 7.5rem;
+
+  @include for-phone-only {
+    padding: 2rem 0.875rem;
+    margin-bottom: 3rem;
+  }
+}
+
+.h-our-restaurants {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+
+    @include for-tablet-landscape-up {
+        margin-bottom: 5rem;
+    font-size: 4rem;
+    }
+
+    @include for-desktop-up {
+        font-size: 6rem;
+    }
+}
+
+.r-menu-grid {
+  display: grid;
+  grid-gap: 2.5rem;
+  grid-template-columns: 1fr;
+
+  @include for-tablet-landscape-up {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include for-desktop-up {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.r-menu-item {
+  @include applyRounded;
+  background: $primary-color;
+
+  &:nth-child(1) {
+    background: $pastelle-color-1;
+  }
+
+  &:nth-child(2) {
+    background: $pastelle-color-2;
+  }
+
+  &:nth-child(3) {
+    background: $pastelle-color-3;
+  }
+}
+
+.r-menu-item-name {
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 2rem;
+}
+
+.r-menu-list-item-heading {
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 0.75rem 0.75rem;
+}
+
+.r-menu-list {
+}
+
+.r-menu-list-item {
+  &:not(:last-child) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  }
+
+  &:nth-child(2n + 1) {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  &:last-child {
+    border-radius: 0 0 $border-radius $border-radius;
+  }
+}
+
+.r-category-item {
+  padding: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.r-category-item-heading {
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+}
+
+.r-category-item-secondary {
+  font-weight: 400;
+}
