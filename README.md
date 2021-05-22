@@ -27,3 +27,10 @@ I also recommend using something like nodemon to refresh the page every time a c
 
 #### Deploy to gh-pages
 `npm run deploy`
+
+## Remarks
+- Use native web components or a framework even if you are doing a small interface mockup
+- Write CSS mobile first and not the other way around
+- CSS grid seems to be the de facto in front-end web development nowadays. Back when I was still active in this field, it did not have strong browser support.
+- I usually design as I go, and that does not usually end up very well.
+- I find that the exercise tutorial videos provided a wrong take on creating CSS media queries in Sass. They should be included within the initial block and not in a separate file. This makes things 10x easier.
