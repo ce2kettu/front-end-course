@@ -2,6 +2,13 @@
 
 Live page: [https://ce2kettu.github.io/front-end-course/](https://ce2kettu.github.io/front-end-course/)
 
+## Screenshots
+
+<img src="screenshots/home_1.png" width="700px" height="auto">
+<img src="screenshots/home_2.png" width="700px" height="auto">
+<img src="screenshots/home_3.png" width="700px" height="auto">
+
+
 ## Introduction and motivation
 
 ### Motivation
