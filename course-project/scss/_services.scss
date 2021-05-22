@@ -1,0 +1,33 @@
+.content-services {
+  padding: 1rem;
+
+  @include for-tablet-portrait-up {
+    padding: 2rem;
+  }
+}
+
+.masthead-image {
+  img {
+    width: 100%;
+    height: auto;
+    min-height: 16.5rem;
+    object-fit: cover;
+    @include applyRounded;
+
+    @include for-desktop-up {
+      margin-top: 4rem;
+    }
+  }
+}
+
+.info-services {
+    margin-top: 2rem;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+
+    @include for-desktop-up {
+        font-size: 3rem;
+        max-width: 50rem;
+        margin-bottom: 7.5rem;
+    }
+}

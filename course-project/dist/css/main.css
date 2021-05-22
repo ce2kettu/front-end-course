@@ -574,7 +574,7 @@ main .content.home-page {
 
 .content-restaurants {
   padding: 2rem;
-  padding-top: 11.5rem;
+  padding-top: 8rem;
   margin-bottom: 7.5rem; }
   @media (max-width: 599px) {
     .content-restaurants {
@@ -622,7 +622,8 @@ main .content.home-page {
 .r-menu-list-item-heading {
   font-weight: 600;
   font-size: 1.1rem;
-  padding: 0.75rem 0.75rem; }
+  padding: 0.75rem 0.75rem;
+  padding-bottom: 0.25rem; }
 
 .r-menu-list-item:not(:last-child) {
   border-bottom: 1px solid rgba(0, 0, 0, 0.15); }
@@ -635,7 +636,8 @@ main .content.home-page {
 
 .r-category-item {
   padding: 0.75rem;
-  font-size: 0.9rem; }
+  font-size: 0.9rem;
+  margin-left: .75rem; }
 
 .r-category-item-heading {
   font-weight: 500;
@@ -643,6 +645,66 @@ main .content.home-page {
 
 .r-category-item-secondary {
   font-weight: 400; }
+
+.content-services {
+  padding: 1rem; }
+  @media (min-width: 600px) {
+    .content-services {
+      padding: 2rem; } }
+
+.masthead-image img {
+  width: 100%;
+  height: auto;
+  min-height: 16.5rem;
+  object-fit: cover;
+  border-radius: 0.75rem; }
+  @media (min-width: 1200px) {
+    .masthead-image img {
+      margin-top: 4rem; } }
+
+.info-services {
+  margin-top: 2rem;
+  font-size: 2rem;
+  margin-bottom: 3rem; }
+  @media (min-width: 1200px) {
+    .info-services {
+      font-size: 3rem;
+      max-width: 50rem;
+      margin-bottom: 7.5rem; } }
+
+.content-contact {
+  padding: 1rem; }
+  @media (min-width: 600px) {
+    .content-contact {
+      padding: 2rem; } }
+
+.contact-grid {
+  margin-top: 2rem;
+  width: 100%;
+  display: grid;
+  grid-gap: 2.5rem;
+  grid-template-columns: 1fr;
+  margin-bottom: 3rem; }
+  @media (min-width: 600px) {
+    .contact-grid {
+      margin-top: 4rem;
+      grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1200px) {
+    .contact-grid {
+      margin-bottom: 7.5rem;
+      margin-top: 7rem;
+      grid-template-columns: repeat(3, 1fr); } }
+  .contact-grid .contact-item {
+    background: #d6d6d6;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5rem; }
+    .contact-grid .contact-item .contact-item-heading {
+      font-weight: 500;
+      font-size: 1.2rem;
+      margin-bottom: 1rem; }
 
 * {
   box-sizing: border-box; }
