@@ -17,8 +17,7 @@ The project idea was actually already in place before starting this course. So, 
 Also, this project really freshened up my memory about web development and the whole process of spending 5 hours to find the best color for an element...
 
 ### Introduction
-The scope of the project was to create a new look and feel to the Aalef website we know and love (?). You can check out the website [here](https://aalef.fi/) if you are not familiar with it. Aalef Ltd. provides e.g., lunch and bookstore services for students on the LUT-University campus. I felt discouraged by not using any frameworks (like bro do I really want to copy paste my footer on every page?) and hence did not put my best effort into the project. (I also don't have the time)
-_and I still kind of went overboard with the project, but you know, at least I had my fun._
+The scope of the project was to create a new look and feel to the Aalef website we know and love (?). You can check out the website [here](https://aalef.fi/) if you are not familiar with it. Aalef Ltd. provides e.g., lunch and bookstore services for students on the LUT-University campus. I felt discouraged by not using any frameworks (like bro do I really want to copy paste my footer on every page?) and hence did not put my best effort into the project. (and I also didn't have the time)
 
 ## Installation and development
 
@@ -36,9 +35,9 @@ I also recommend using something like nodemon to refresh the page every time a c
 `npm run deploy`
 
 ## Remarks
-- Use native web components or a framework even if you are doing a small interface mockup
-- Write CSS mobile first and not the other way around
+- Use native web components or a framework even if you are doing a small interface mockup.
+- Write CSS mobile first and not the other way around.
 - CSS grid seems to be the de facto in front-end web development nowadays. Back when I was still active in this field, it did not have strong browser support.
-- I usually design as I go, and that does not usually end up very well.
-- I find that the exercise tutorial videos provided a wrong take on creating CSS media queries in Sass. They should be included within the initial block and not in a separate file. This makes things 10x easier.
+- I usually design as I go, and that does not usually end very well.
+- I find that the exercise tutorial videos provided a wrong take on creating CSS media queries in Sass. I think they should be included within the initial block and not in a separate file. This makes things 10x easier.
 - Write shared styles. E.g., header styles h1, h2, h3 and page layout setup. Makes it easy to keep styles consistent and make the site responsive.
