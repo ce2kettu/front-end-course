@@ -37,7 +37,7 @@ I also recommend using something like nodemon to refresh the page every time a c
 ## Remarks
 - Use native web components or a framework even if you are doing a small interface mockup.
 - Write CSS mobile first and not the other way around.
-- CSS grid seems to be the de facto in front-end web development nowadays. Back when I was still active in this field, it did not have strong browser support.
-- I usually design as I go, and that does not usually end very well.
+- CSS grid seems to be the de facto tool in front-end web development nowadays. As back when I was still active in this field, it did not have strong browser support.
+- I usually design things as I go, and that does not usually end very well.
 - I find that the exercise tutorial videos provided a wrong take on creating CSS media queries in Sass. I think they should be included within the initial block and not in a separate file. This makes things 10x easier.
 - Write shared styles. E.g., header styles h1, h2, h3 and page layout setup. Makes it easy to keep styles consistent and make the site responsive.
