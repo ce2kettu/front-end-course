@@ -2,6 +2,8 @@
 
 Live page: [https://ce2kettu.github.io/front-end-course/](https://ce2kettu.github.io/front-end-course/)
 
+Demo video: [https://streamable.com/xlm7dy](https://streamable.com/xlm7dy)
+
 ## Screenshots
 
 <img src="screenshots/home_1.png" width="700px" height="auto">
